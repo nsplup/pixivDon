@@ -20,7 +20,7 @@ function main (listPath, startIndex) {
   }
   listContent = listContent.split(/[\n\r]+/)
     .map(line => line.trim())
-    .filter(line => line.length > 0)
+    .filter(line => (line.length > 0) && !line.startsWith('#'))
   
   let task = Promise.resolve()
   let len = listContent.length

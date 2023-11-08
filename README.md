@@ -9,8 +9,9 @@
 # 2. git clone 代码到本地
 # 3. cd 至代码文件夹
 # 4. npm install 安装依赖
-# 5. 登录 pixiv 并使用任意浏览器扩展导出 cookies.txt 覆盖根目录的同名文件
-# 5.1 以 Firefox 为例，可选扩展：https://github.com/hrdl-github/cookies-txt
+# 5. （可选的）登录 pixiv 并使用任意浏览器扩展导出 cookies.txt 覆盖根目录的同名文件
+# 5.1 跳过此步骤将以游客状态发起请求
+# 5.2 以 Firefox 为例，可选扩展：https://github.com/hrdl-github/cookies-txt
 # 6. （可选的）修改配置文件
 ```
 
@@ -26,6 +27,7 @@
 ### 纯文本文件
 ### 每行一条[URL]
 ### 空白行会被忽略
+### 井号（#）开头的行会被视为注释（被忽略）
 # [startIndex]说明:
 ### 可选的
 ### 起始索引，意外中断时很方便
