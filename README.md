@@ -1,6 +1,6 @@
 # pixivDon
 
-> **pixivDon** 只支持并将长期只支持【小说下载】。
+> **pixivDon** 只支持并将长期只支持【小说下载】【漫画下载】【插画下载】。
 
 ## 🤔我该怎么做？
 
@@ -19,8 +19,10 @@
 
 ```bash
 # [URL]示例:
-### 系列作品: https://www.pixiv.net/novel/series/[:id]
-### 单篇作品: https://www.pixiv.net/novel/show.php?id=[:id]
+### 系列小说: https://www.pixiv.net/novel/series/[:id]
+### 单篇小说: https://www.pixiv.net/novel/show.php?id=[:id]
+### 系列漫画: https://www.pixiv.net/user/[:userId]/series/[:id]
+### 漫画插画: https://www.pixiv.net/artworks/[:id]
 # node main.js [URL]
 
 # [plainTextPath]说明:

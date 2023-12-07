@@ -1,6 +1,7 @@
 const parseCookieFile = require('./lib/parseCookieFile')
-const { ISNOVEL_REG } = require('./lib/regExp')
+const { ISNOVEL_REG, ISMANGA_REG, ARTWORK_REG } = require('./lib/regExp')
 const novelProcess = require('./lib/novel')
+const mangaProcess = require('./lib/manga')
 const { DOMAIN } = require('./lib/constants')
 
 const COOKIE_FILE = './cookies.txt'
@@ -24,6 +25,11 @@ function main (url) {
     switch (true) {
       case ISNOVEL_REG.test(url):
         novelProcess(url, cookies).then(done)
+        break
+      case ARTWORK_REG.test(url):
+        ARTWORK_REG.lastIndex = 0
+      case ISMANGA_REG.test(url):
+        mangaProcess(url, cookies).then(done)
         break
       default:
         console.log('错误: 不受支持的【URL】地址')
